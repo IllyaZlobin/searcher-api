@@ -1,9 +1,10 @@
 import { PrimaryGeneratedColumn, Entity, Column, OneToMany, ManyToOne } from "typeorm";
 import { City } from "src/core/db/entities/city.entity";
 import { Country } from "src/core/db/entities/country.entity";
+import { IActor } from "../models/actor.model";
 
 @Entity('actor')
-export class Actor {
+export class Actor implements IActor {
   @PrimaryGeneratedColumn()
   id: number; 
   

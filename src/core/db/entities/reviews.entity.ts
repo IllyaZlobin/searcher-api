@@ -1,9 +1,10 @@
 import { PrimaryGeneratedColumn, Entity, Column, ManyToOne } from "typeorm";
 import { User } from "src/core/db/entities/user.entity";
 import { Movies } from "src/core/db/entities/movies.entity";
+import { IReviews } from "../models/reviews.model";
 
 @Entity('reviews')
-export class Reviews {
+export class Reviews implements IReviews {
   @PrimaryGeneratedColumn()
   id: number;
 

@@ -1,9 +1,10 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Actor } from "src/core/db/entities/actor.entity";
 import { User } from "src/core/db/entities/user.entity";
+import { ICountry } from "../models/country.model";
 
 @Entity('country')
-export class Country {
+export class Country implements ICountry {
   @PrimaryGeneratedColumn()
   id: number;
 

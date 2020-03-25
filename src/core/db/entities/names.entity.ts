@@ -1,7 +1,8 @@
 import { Entity, PrimaryGeneratedColumn, Column } from "typeorm";
+import { INames } from "../models/names.model";
 
 @Entity('names')
-export class Names {
+export class Names implements INames {
   @PrimaryGeneratedColumn()
   id: number;
 

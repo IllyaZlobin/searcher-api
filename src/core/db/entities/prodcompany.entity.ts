@@ -1,8 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Movies } from "src/core/db/entities/movies.entity";
+import { IProdCompany } from "../models/prodcompany.model";
 
 @Entity('productioncompany')
-export class ProdCompany {
+export class ProdCompany implements IProdCompany {
   @PrimaryGeneratedColumn()
   id: number;
   

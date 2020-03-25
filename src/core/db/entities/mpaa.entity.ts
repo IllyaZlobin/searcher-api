@@ -1,8 +1,9 @@
 import { Entity, PrimaryGeneratedColumn, Column, OneToMany } from "typeorm";
 import { Movies } from "./movies.entity";
+import { IMpaa } from "../models/mpaa.model";
 
 @Entity('mpaarating')
-export class MpaaRating {
+export class MpaaRating implements IMpaa {
   @PrimaryGeneratedColumn()
   id: number;
   

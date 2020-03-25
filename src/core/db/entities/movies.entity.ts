@@ -5,9 +5,10 @@ import { Reviews } from "src/core/db/entities/reviews.entity";
 import { Actors } from "./actors.entity";
 import { Genres } from "./genres.entity";
 import { Directors } from "./directors.entity";
+import { IMovies } from "../models/movies.model";
 
 @Entity('movies')
-export class Movies {
+export class Movies implements IMovies {
   @PrimaryGeneratedColumn()
   id: number;
   
@@ -49,4 +50,6 @@ export class Movies {
 
   @OneToMany(type => Directors, directors => directors.movie)
   directors: Directors[]
+
+  poster: string;
 }
