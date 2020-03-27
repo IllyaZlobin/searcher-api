@@ -1,5 +1,5 @@
-import { JoiRegisteredSchemas } from "src/core/pipes/validation/joiRegisteredSchemas";
-import { UserRegisterRequestSchema } from "src/modules/user/dto/register/userRegister.schema";
+import { JoiRegisteredSchemas } from "src/common/pipes/validation/joiRegisteredSchemas";
+import { UserRegisterRequestSchema } from "src/dto/user/register/userRegister.schema";
 
 export const SearcherValidationSchemas: JoiRegisteredSchemas = {
   UserRegisterRequest: UserRegisterRequestSchema

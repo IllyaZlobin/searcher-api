@@ -1,8 +1,8 @@
 import { NestFactory, HttpAdapterHost } from '@nestjs/core';
 import { AppModule } from './app.module';
-import { configureFilters } from './core/startup/filters';
-import { configurePipes } from './core/startup/pipes';
-import { configureSwagger } from './core/startup/swagger';
+import { configureFilters } from './common/startup/filters';
+import { configurePipes } from './common/startup/pipes';
+import { configureSwagger } from './common/startup/swagger';
 
 async function bootstrap() {
   const app = await NestFactory.create(AppModule, {

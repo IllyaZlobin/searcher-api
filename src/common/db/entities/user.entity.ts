@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
-import { City } from "src/core/db/entities/city.entity";
-import { Country } from "src/core/db/entities/country.entity";
-import { Reviews } from "src/core/db/entities/reviews.entity";
+import { City } from "./city.entity";
+import { Country } from "./country.entity";
+import { Reviews } from "./reviews.entity";
 import { IUser } from "../models/user.model";
 
 @Entity('user')

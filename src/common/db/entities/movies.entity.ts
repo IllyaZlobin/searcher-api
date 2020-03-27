@@ -1,7 +1,7 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
 import { MpaaRating } from "./mpaa.entity";
-import { ProdCompany } from "src/core/db/entities/prodcompany.entity";
-import { Reviews } from "src/core/db/entities/reviews.entity";
+import { ProdCompany } from "./prodcompany.entity";
+import { Reviews } from "./reviews.entity";
 import { Actors } from "./actors.entity";
 import { Genres } from "./genres.entity";
 import { Directors } from "./directors.entity";

@@ -1,6 +1,6 @@
 import { Injectable, PipeTransform, ArgumentMetadata } from "@nestjs/common";
 import { JoiRegisteredSchemas } from "./joiRegisteredSchemas";
-import { ValidationException } from "src/core/exceptions/validation.exception";
+import { ValidationException } from "src/common/exceptions/validation.exception";
 
 
 @Injectable()
