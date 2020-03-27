@@ -5,7 +5,7 @@ import { CoreModule } from './core/core.module';
 import { TypeOrmModule } from '@nestjs/typeorm';
 import { ConfigService } from './core/config/config.service';
 import { MoviesModule } from './modules/movies/movies.module';
-import { DbEntities } from './core/db/dbEntities';
+import { DbEntities } from './common/db/dbEntities';
 import { NamesModule } from './modules/names/names.module';
 import { ProdcompanyModule } from './modules/prodcompany/prodcompany.module';
 import { CountryModule } from './modules/country/country.module';
@@ -13,9 +13,9 @@ import { CityModule } from './modules/city/city.module';
 import { ActorModule } from './modules/actor/actor.module';
 import { UserModule } from './modules/user/user.module';
 import { ReviewsModule } from './modules/reviews/reviews.module';
-import { UserInfoMiddleware } from './core/middlewares/userInfo.middleware';
+import { UserInfoMiddleware } from './common/middlewares/userInfo.middleware';
 import { MoviesController } from './modules/movies/movies.controller';
-import { AuthModule } from './auth/auth.module';
+import { AuthModule } from './core/auth/auth.module';
 
 @Module({
   imports: [

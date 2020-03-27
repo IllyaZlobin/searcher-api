@@ -1,6 +1,6 @@
 import { Entity, PrimaryGeneratedColumn, Column, ManyToOne, OneToMany } from "typeorm";
-import { Actor } from "src/core/db/entities/actor.entity";
-import { User } from "src/core/db/entities/user.entity";
+import { Actor } from "./actor.entity";
+import { User } from "./user.entity";
 import { ICity } from "../models/city.model";
 
 @Entity('city')

@@ -1,6 +1,6 @@
 import { PrimaryGeneratedColumn, Entity, Column, ManyToOne } from "typeorm";
-import { User } from "src/core/db/entities/user.entity";
-import { Movies } from "src/core/db/entities/movies.entity";
+import { User } from "./user.entity";
+import { Movies } from "./movies.entity";
 import { IReviews } from "../models/reviews.model";
 
 @Entity('reviews')
