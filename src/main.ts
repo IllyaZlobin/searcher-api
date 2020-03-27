@@ -10,8 +10,8 @@ async function bootstrap() {
   });
   app.enableCors();
   
-  configureFilters(app);
   configurePipes(app);
+  configureFilters(app);
   configureSwagger(app, 'Searcher API', 'short description', '1.0');
 
   const port = 3000;

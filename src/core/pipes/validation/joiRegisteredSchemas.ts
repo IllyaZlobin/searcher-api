@@ -1,5 +1,5 @@
 import * as Joi from '@hapi/joi';
 
 export interface JoiRegisteredSchemas {
-  [key: string]: Joi.ObjectsSchema<any>;  
+  [key: string]: Joi.ObjectSchema<any>; 
 }

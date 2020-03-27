@@ -1,10 +1,13 @@
-import { Catch, ArgumentsHost, NotFoundException } from "@nestjs/common";
+import { Catch, ArgumentsHost, NotFoundException, HttpServer, Logger } from "@nestjs/common";
 import { BaseExceptionFilter } from "@nestjs/core";
 import { ValidationException } from "../exceptions/validation.exception";
 import { UserFriendlyException } from "../exceptions/userFriendly.exception";
 
 @Catch()
 export class ExceptionsFilter extends BaseExceptionFilter {
+  constructor(applicationRef?: HttpServer, private logger?: Logger, private logLocalExceptions?: boolean) {
+    super(applicationRef);
+  }
   catch(exception: unknown, host: ArgumentsHost) {
     
     const ctx = host.switchToHttp();

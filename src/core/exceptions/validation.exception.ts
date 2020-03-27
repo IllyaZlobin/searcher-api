@@ -1,18 +1,21 @@
 import { HttpException, HttpStatus } from "@nestjs/common"
+import { ValidationError } from "./validationError";
 
 export class ValidationException extends HttpException {
-  errors: string[];
+  errors: ValidationError[];
 
-  constructor(error: string);
-  constructor(errors: string[]);
+  constructor(error: ValidationError);
+  constructor(errors: ValidationError[]);
   constructor(message: string, property?: string[]);
-  constructor(errorsOrMessage: string | string[], property: string[] = []) {
+  constructor(errorsOrMessage: ValidationError | ValidationError[] | string, property: string[] = []) {
     super('The model is not valid', HttpStatus.BAD_REQUEST);
 
     if (Array.isArray(errorsOrMessage)) {
-      this.errors = errorsOrMessage
+      this.errors = errorsOrMessage;
     } else if (typeof errorsOrMessage === 'string') {
-      this.errors = [errorsOrMessage]
+      this.errors = [{ message: errorsOrMessage, property }];
+    } else {
+      this.errors = [errorsOrMessage];
     }
   }
 }
